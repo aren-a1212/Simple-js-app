@@ -1,6 +1,5 @@
-//Displays favourite food on the main page
-let favortiteFood= 'salads';
-document.write(favortiteFood);
-
-//DISPLAYS HELLO WORLD ON MAIN PAGE
-alert('Hello world');
+let PokemonList=[
+    {name:'Lopunny', height: 3, types:['normal','poison'] },
+    {name:'Abra', height: 2, types:['pyschic', 'sleeper']},
+    {name:'Rapidash', height:5 , types:['fire','runner']}
+];
