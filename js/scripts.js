@@ -13,7 +13,7 @@ let pokemonList=[
   //` ${pokemonList[i].name} (height: ${pokemonList[i].height}) <br>`)
     //}
 
-
+//  add a conditional. The conditional should check if the height is above a certain value
 let message = "";
 
 for(let i= 0; i < pokemonList.length; i++){
