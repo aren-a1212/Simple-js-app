@@ -1,22 +1,23 @@
 
 // added in array and objects within my array
-//let pokemonRepository = (function(){
+// adding IIFE
+let pokemonRepository = (function(){
 let pokemonList=[
     {name:'Lopunny', height: 3, types:['normal','poison'] },
     {name:'Abra', height: 2, types:['pyschic', 'sleeper']},
     {name:'Rapidash', height:5 , types:['fire','runner']}
 ];  
-   //function add(pokemon){
-  //    pokemmonList.push(pokemon);
-  // }
-  // function getAll(){
-  //   return pokemonList;
-  // }
- //  return{
- //     add : add,
- //     getAll : getAll
- //  };
-//}  ) ();
+   function add(pokemon){
+    pokemmonList.push(pokemon);
+   }
+    function getAll(){
+     return pokemonList;
+   }
+    return{
+      add : add,
+      getAll : getAll
+   };
+}  ) ();
 
 
 //Use document.write() inside the loop’s code to write the Pokémon name on your website’s DOM.
@@ -39,14 +40,14 @@ let pokemonList=[
     //   `${pokemonList[i].name} (height: ${pokemonList[i].height})  ${message}  <br>`);
 //}
 //PART 1 EX :1.5
-function myLoop(pokemon){
+//function myLoop(pokemon){
+  // document.write('<p>' + pokemon.name + ' | height: ' + pokemon.height + '| type:  '  +  pokemon.types   + '</p>');
+//}
+//pokemonList.forEach(myLoop);
+
+
+
+//PART2 EX: 1.5
+pokemonRepository.getAll().forEach(function (pokemon) {
    document.write('<p>' + pokemon.name + ' | height: ' + pokemon.height + '| type:  '  +  pokemon.types   + '</p>');
-}
-pokemonList.forEach(myLoop);
-
-
-
-//PART2
-//pokemonRepository.getAll().forEach(function (pokemon) {
-  //  document.write('<p>' + pokemon.name + ' | height: ' + pokemon.height + '</p>');
-//});
+});
