@@ -15,17 +15,19 @@ let pokemonList=[
    }
    function addListitem(pokemon){
       let pokemonList = document.querySelector(".pokemon-List");
-      let listitem = document.createElement('Li');
+      let listitem = document.createElement('li');
       let button = document.createElement('button');
       button.innerText = pokemon.name;
       button.classList.add("button-class");
       listitem.appendChild(button);
       pokemonList.appendChild(listitem);
-      button.addEventListener('click' , showDetails);
+      button.addEventListener('click' , function(){
+         showDetails(pokemon);
+      });
    }
 
    function showDetails(pokemon){
-       console.log(pokemon.name);
+       console.log(pokemon.name)
    }
     return{
       add : add,
