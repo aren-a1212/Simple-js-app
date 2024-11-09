@@ -55,7 +55,7 @@ function add(pokemon) {
    }).then(function(details){
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
-      item.type = details.type;
+      item.types = details.types;
    }).catch(function(e){
       console.error(e);
    });
